@@ -2,6 +2,7 @@
 #define HUNGARIAN_H
 
 #include <vector>
+#include <memory>
 
 struct WeightedBipartiteEdge {
     int left;
