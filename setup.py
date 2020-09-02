@@ -16,8 +16,8 @@ LICENSE = "Apache 2.0"
 SRC_DIR = "hungarian"
 PACKAGES = [SRC_DIR]
 
-ext_1 = Extension(SRC_DIR + ".pywrapper",
-                  [SRC_DIR + "/hungarian.cpp", SRC_DIR + "/wrapper.pyx"],
+ext_1 = Extension("pyhungrarian",
+                  [SRC_DIR + "/hungarian.cpp", SRC_DIR + "/pyhungarian.pyx"],
                   libraries=[],
                   include_dirs=[np.get_include()],
                   extra_compile_args=["-O3"],

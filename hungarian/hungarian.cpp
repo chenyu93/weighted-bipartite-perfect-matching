@@ -5,6 +5,7 @@
 #include <vector>
 #include <deque>
 #include <cassert>
+#include <iostream>
 
 #include "hungarian.h"
 
@@ -33,6 +34,10 @@ struct LeftEdge {
         return right < otherEdge.right || (right == otherEdge.right && cost < otherEdge.cost);
     }
 };
+
+void test(WeightedBipartiteEdge edge) {
+    std::cout << edge.left << edge.right << edge.cost << std::endl;
+}
 
 const std::vector<int> hungarianMinimumWeightPerfectMatching(const int n, const std::vector<WeightedBipartiteEdge> allEdges) {
 

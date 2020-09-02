@@ -12,6 +12,12 @@ cdef extern from "hungarian.h":
 
     const vector[int] hungarianMinimumWeightPerfectMatching(int n, const vector[WeightedBipartiteEdge] allEdges)
 
+    void test(WeightedBipartiteEdge edge)
 
-def c_match(int n):
-    return hungarianMinimumWeightPerfectMatching(n, [])
+
+cpdef c_match(int n, vector[WeightedBipartiteEdge] edges):
+    return hungarianMinimumWeightPerfectMatching(n, edges)
+
+
+def c_test(WeightedBipartiteEdge edge):
+    test(edge)

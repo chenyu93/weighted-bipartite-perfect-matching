@@ -19,5 +19,6 @@ struct WeightedBipartiteEdge {
 // (Note: Edges with endpoints out of the range [0, n) are ignored.)
 const std::vector<int> hungarianMinimumWeightPerfectMatching(int n, const std::vector<WeightedBipartiteEdge> allEdges);
 
+void test(WeightedBipartiteEdge edge);
 
 #endif // HUNGARIAN_H
